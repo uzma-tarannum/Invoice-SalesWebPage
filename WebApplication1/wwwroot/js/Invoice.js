@@ -17,7 +17,7 @@
 //        }
 //    })
 //}).call(angular)
-
+$ = jQuery;
 
 $(document).ready(function () {
     onLoadCategories();

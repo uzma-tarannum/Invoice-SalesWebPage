@@ -18,9 +18,9 @@ namespace WebApplication1.Models.DataAccess
 
         public void Edit(Product product)
         {
-            _db.product.Update(product);
+                _db.product.Update(product);
            
-            _db.SaveChanges();
+                _db.SaveChanges();
         }
 
         public IList<ProductCategory> GetCategories()

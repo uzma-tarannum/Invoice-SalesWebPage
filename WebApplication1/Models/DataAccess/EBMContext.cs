@@ -14,6 +14,10 @@ namespace WebApplication1.Models.DataAccess
         public DbSet<ProductCategory> productCategory { get; set; }
         public DbSet<ProductBrand> productBrand { get; set; }
 
+        public DbSet<Customer> Customer {  get; set; }
+        public DbSet<CustomerCategory> CustomerCategory {  get; set; }
+        public  DbSet<CustomerArea> CustomerArea { get; set; }
+
 
 
     }

@@ -1,0 +1,44 @@
+﻿@using WebApplication1.ViewModels;
+@model CustomerViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Form</title>
+</head>
+<body class="p-3 mb-2 bg-danger-subtle text-white">
+    <form method="post" action="/Customer/SaveCustomer">
+        <fieldset>
+            <legend>Add Customer</legend>
+            <div>
+                <label for="Name">Customer Name:</label>
+                <input type="text" name="Name" value="" />
+            </div>
+            <br>
+            <div>
+                <label for="CategoryCode">Customer CategoryCode:</label>
+                <select asp-for="@Model.CategoryCode" id="CustomerCategoryCode"> </select>
+            </div>
+            <br />
+            <div>
+                <label for="AreaCode">Customer Area:</label>
+                <select asp-for="@Model.AreaCode" id="AreaCode"> </select>
+            </div>
+            <br />
+            <div>
+                <label for="Adress">Address:</label>
+                <input type="text" name="Adress" value="" />
+            </div>
+            <br />
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script type="text/javascript" src="~/js/customer.js"></script>
