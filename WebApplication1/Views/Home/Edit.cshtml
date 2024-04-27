@@ -1,0 +1,50 @@
+﻿@using WebApplication1.ViewModels;
+@model ProductViewModel
+
+<html>
+
+<head>
+    <title>Product Form</title>
+</head>
+<body class="p-3 mb-2 bg-warning text-white">
+    <form asp-action="Update" asp-controller="Home">
+        <input type="hidden" asp-for="@Model.Code" value="@Model.Code" /><br>
+        <fieldset>
+            <legend>Edit Product</legend>
+            <div>
+                <label for="Name">Product Name:</label>
+                <input type="text" name="Name" value="@Model.Name" />
+            </div>
+            <br>
+            <div>
+                <label for="CategoryCode" val>CategoryCode:</label>
+                <select asp-for="@Model.CategoryCode" id="CategoryCode" value="@Model.CategoryCode"> </select>
+            </div>
+            <br />
+            <div>
+                <label for="BrandCode">BrandCode:</label>
+                <select asp-for="@Model.BrandCode" id="BrandCode" value="@Model.BrandCode"> </select>
+            </div>
+            <br />
+            <div>
+                <label for="SalesRate">Sales Rate:</label>
+                <input type="text" name="SalesRate" value="@Model.SalesRate" />
+            </div>
+            <br />
+            <div>
+                <label for="CostRate">Cost Rate:</label>
+                <input type="text" name="CostRate" value="@Model.CostRate" />
+            </div>
+            <br />
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Edit" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script type="text/javascript" src="~/js/Invoice.js"></script>

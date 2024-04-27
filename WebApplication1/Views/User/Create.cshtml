@@ -1,0 +1,48 @@
+﻿@using WebApplication1.ViewModels;
+@model UserViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="~/css/site.css">
+
+    <title>Login form</title>
+</head>
+<body>
+    <div class="login">.
+
+        <form action="/User/Save" method="post" class="login__form p-3 mb-2 bg-primary text-white">
+            <h1 class="login__title">Login</h1>
+
+            <div class="login__inputs">
+                <div class="login__box">
+                    <input type="email" name="UserName" placeholder="Email ID" required class="login__input">
+                    <i class="ri-mail-fill"></i>
+                </div>
+
+                <div class="login__box">
+                    <input type="password" name="Password" placeholder="Password" required class="login__input">
+                    <i class="ri-lock-2-fill"></i>
+                </div>
+            </div>
+
+            <div class="login__check">
+                <div class="login__check-box">
+                    <input type="checkbox" class="login__check-input" id="user-check">
+                    <label for="user-check" class="login__check-label">Remember me</label>
+                </div>
+            </div>
+
+            <button type="submit" class="login__button" value="Create">Login</button>
+
+            <div class="login__register">
+                Don't have an account? <a href="#">Register</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
